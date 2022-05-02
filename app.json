@@ -1,0 +1,48 @@
+{
+	"name": "heroku_download",
+	"addons": [
+		{
+		  "plan": "heroku-postgresql:hobby-dev"
+		}
+	],
+	"description": "Run aria and fetch sht",
+	"repository": "https://github.com/Kwok1am/heroku_download",
+	"keywords": ["AriaNG"],
+	"env": {
+		"HEROKU_APP_NAME": {
+			"description": "This should be the same as \"App name\" above.",
+			"value": ""
+		},
+		"ARIA2C_SECRET": {
+			"description": "Aria2c's secret",
+			"value": ""
+		},
+		"SA_SECRET": {
+			"description": "SA SECRET",
+			"value": ""
+		},
+		"SIZE_FILTER": {
+			"description": "SIZE FILTER",
+			"value": "90M"
+		},
+		"RCLONE_CONFIG": {
+			"description": "Rclone config to mount in one line, replace line breaks with \"\\n\"",
+			"required": false
+		},
+		"RCLONE_DESTINATION": {
+			"description": "Rclone destination path, format \"[drivename A]:[remove path A]\"",
+			"required": false,
+			"value": "Google:tmp"
+		},
+		"RCLONE_DESTINATION_2": {
+			"description": "If you mount a second cloud drive, then fill in \"[drivename B]:[remove path B]\"",
+			"required": false,
+			"value": ""
+		}
+	},
+	"buildpacks": [
+		{
+			"url": "heroku/nodejs"
+		}
+	]
+}
