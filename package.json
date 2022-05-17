@@ -5,7 +5,7 @@
   "main": "index.js",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Kwok1am/heroku_download.git"
+    "url": "git+https://github.com/akame-e/download.git"
   },
   "author": "",
   "license": "ISC",
