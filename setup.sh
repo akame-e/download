@@ -17,6 +17,7 @@ unrar -p"${SA_SECRET}" e accounts.rar /app/accounts/
 wget -q https://raw.githubusercontent.com/fzfile/heroku-aria2c/master/aria2.zip
 unzip -q aria2.zip
 export PATH=$PWD/Aria2:$PATH
+chmod 777 ./Aria2/aria2c
 
 # Create download folder
 mkdir -p downloads
