@@ -14,10 +14,9 @@ export PATH=$PWD/rar:$PATH
 unrar -p"${SA_SECRET}" e accounts.rar /app/accounts/
 
 # Install aria2c static binary
-wget -q https://raw.githubusercontent.com/fzfile/heroku-aria2c/master/aria2.zip
-unzip -q aria2.zip
-export PATH=$PWD/Aria2:$PATH
-chmod 777 ./Aria2/aria2c
+wget -q https://github.com/tingv/Aria2-Pro-Core/releases/download/1.35.0_2021.02.19/aria2-1.35.0-static-linux-amd64.tar.gz
+tar xf aria2-1.35.0-static-linux-amd64.tar.gz
+export PATH=$PWD/aria2-1.35.0-static-linux-amd64:$PATH
 
 # Create download folder
 mkdir -p downloads
