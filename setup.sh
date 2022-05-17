@@ -14,10 +14,9 @@ export PATH=$PWD/rar:$PATH
 unrar -p"${SA_SECRET}" e accounts.rar /app/accounts/
 
 # Install aria2c static binary
-wget -q https://github.com/P3TERX/Aria2-Pro-Core/releases/download/1.36.0_2021.08.22/aria2-1.36.0-static-linux-amd64.tar.gz
-tar xf aria2-1.36.0-static-linux-amd64.tar.gz
-rm aria2-1.36.0-static-linux-amd64.tar.gz
-export PATH=$PWD:$PATH
+wget -q https://github.com/q3aql/aria2-static-builds/releases/download/v1.34.0/aria2-1.34.0-linux-gnu-64bit-build1.tar.bz2
+tar xf aria2-1.34.0-linux-gnu-64bit-build1.tar.bz2
+export PATH=$PWD/aria2-1.34.0-linux-gnu-64bit-build1:$PATH
 
 # Create download folder
 mkdir -p downloads
